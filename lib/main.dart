@@ -1,4 +1,13 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_course_animations_from_zero_to_hero/explicit_animation/lecture_1.dart';
+import 'package:flutter_course_animations_from_zero_to_hero/explicit_animation/lecture_2.dart';
+import 'package:flutter_course_animations_from_zero_to_hero/explicit_animation/lecture_3.dart';
+import 'package:flutter_course_animations_from_zero_to_hero/explicit_animation/lecture_4.dart';
+import 'package:flutter_course_animations_from_zero_to_hero/explicit_animation/lecture_6.dart';
+import 'package:flutter_course_animations_from_zero_to_hero/explicit_animation/lecture_7.dart';
+import 'package:flutter_course_animations_from_zero_to_hero/explicit_animation/lecture_8.dart';
+import 'package:flutter_course_animations_from_zero_to_hero/explicit_animation/lecture_9.dart';
+import 'package:flutter_course_animations_from_zero_to_hero/implicit_Animation/lecture1.dart';
 import 'package:flutter_course_animations_from_zero_to_hero/implicit_Animation/lecture10.dart';
 import 'package:flutter_course_animations_from_zero_to_hero/implicit_Animation/lecture11.dart';
 import 'package:flutter_course_animations_from_zero_to_hero/implicit_Animation/lecture2.dart';
@@ -9,18 +18,18 @@ import 'package:flutter_course_animations_from_zero_to_hero/implicit_Animation/l
 import 'package:flutter_course_animations_from_zero_to_hero/implicit_Animation/lecture7.dart';
 import 'package:flutter_course_animations_from_zero_to_hero/implicit_Animation/lecture8.dart';
 import 'package:flutter_course_animations_from_zero_to_hero/implicit_Animation/lecture9.dart';
-import 'package:flutter_course_animations_from_zero_to_hero/lecture1.dart';
 
 void main() {
+  WidgetsFlutterBinding.ensureInitialized();
   runApp(const MyApp());
 }
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
 
-  // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
+    
     return MaterialApp(
       title: 'Flutter Demo',
       theme: ThemeData(
@@ -38,111 +47,175 @@ class HomeScreen extends StatelessWidget {
       appBar: AppBar(
         title: const Text('Home Screen'),
       ),
-      body: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
-        crossAxisAlignment: CrossAxisAlignment.center,
-        children: [
-          ElevatedButton(
-            onPressed: () {
-              Navigator.push(
-                context,
-                MaterialPageRoute(builder: (context) => Lecture1()),
-              );
-            },
-            child: const Text("Lecture 1"),
-          ),
-          ElevatedButton(
-            onPressed: () {
-              Navigator.push(
-                context,
-                MaterialPageRoute(builder: (context) => Lecture2()),
-              );
-            },
-            child: const Text("Lecture 2"),
-          ),
-          ElevatedButton(
-            onPressed: () {
-              Navigator.push(
-                context,
-                MaterialPageRoute(builder: (context) => Lecture3()),
-              );
-            },
-            child: const Text("Lecture 3"),
-          ),
-          ElevatedButton(
-            onPressed: () {
-              Navigator.push(
-                context,
-                MaterialPageRoute(
-                    builder: (context) => AnimatedOpacityExample()),
-              );
-            },
-            child: const Text("Lecture 4"),
-          ),
-          ElevatedButton(
-            onPressed: () {
-              Navigator.push(
-                context,
-                MaterialPageRoute(builder: (context) => const AniPad()),
-              );
-            },
-            child: const Text("Lecture 5"),
-          ),
-          ElevatedButton(
-            onPressed: () {
-              Navigator.push(
-                context,
-                MaterialPageRoute(builder: (context) => const AnimatedPhysicalModelExample()),
-              );
-            },
-            child: const Text("Lecture 6"),
-          ),
-          ElevatedButton(
-            onPressed: () {
-              Navigator.push(
-                context,
-                MaterialPageRoute(builder: (context) =>  AnimatedPositionedExample()),
-              );
-            },
-            child: const Text("Lecture 7"),
-          ),
-          ElevatedButton(
-            onPressed: () {
-              Navigator.push(
-                context,
-                MaterialPageRoute(builder: (context) =>  AnimatedPositionedDirectionalExample()),
-              );
-            },
-            child: const Text("Lecture 8"),
-          ),
-          ElevatedButton(
-            onPressed: () {
-              Navigator.push(
-                context,
-                MaterialPageRoute(builder: (context) =>  AnimatedCrossFadeExample()),
-              );
-            },
-            child: const Text("Lecture 9"),
-          ),
-          ElevatedButton(
-            onPressed: () {
-              Navigator.push(
-                context,
-                MaterialPageRoute(builder: (context) =>  AnimatedSwitcherExample()),
-              );
-            },
-            child: const Text("Lecture 10"),
-          ),
-          ElevatedButton(
-            onPressed: () {
-              Navigator.push(
-                context,
-                MaterialPageRoute(builder: (context) =>  AnimatedListExample()),
-              );
-            },
-            child: const Text("Lecture 11"),
-          ),
-        ],
+      body: Center(
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.center,
+          children: [
+            ElevatedButton(
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => const Lecture1()),
+                );
+              },
+              child: const Text("Lecture 1"),
+            ),
+            ElevatedButton(
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => const Lecture2()),
+                );
+              },
+              child: const Text("Lecture 2"),
+            ),
+            ElevatedButton(
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => const Lecture3()),
+                );
+              },
+              child: const Text("Lecture 3"),
+            ),
+            ElevatedButton(
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                      builder: (context) => const AnimatedOpacityExample()),
+                );
+              },
+              child: const Text("Lecture 4"),
+            ),
+            ElevatedButton(
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => const AniPad()),
+                );
+              },
+              child: const Text("Lecture 5"),
+            ),
+            ElevatedButton(
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => const AnimatedPhysicalModelExample()),
+                );
+              },
+              child: const Text("Lecture 6"),
+            ),
+            ElevatedButton(
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) =>  AnimatedPositionedExample()),
+                );
+              },
+              child: const Text("Lecture 7"),
+            ),
+            ElevatedButton(
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) =>  AnimatedPositionedDirectionalExample()),
+                );
+              },
+              child: const Text("Lecture 8"),
+            ),
+            ElevatedButton(
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) =>  AnimatedCrossFadeExample()),
+                );
+              },
+              child: const Text("Lecture 9"),
+            ),
+            ElevatedButton(
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) =>  AnimatedSwitcherExample()),
+                );
+              },
+              child: const Text("Lecture 10"),
+            ),
+            ElevatedButton(
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) =>  AnimatedListExample()),
+                );
+              },
+              child: const Text("Lecture 11"),
+            ),
+            ElevatedButton(
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) =>PositionedTransitionExample()  ),
+                );
+              },
+              child: const Text("Lecture 12"),
+            ),
+            ElevatedButton(
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) =>SizeTransitionExample()  ),
+                );
+              },
+              child: const Text("Lecture 13"),
+            ),
+            ElevatedButton(
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) =>const RotationTransitionExample()  ),
+                );
+              },
+              child: const Text("Lecture 14"),
+            ),
+            ElevatedButton(
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) =>FadeTransitionExample()),
+                );
+              },
+              child: const Text("Lecture 15"),
+            ),
+            ElevatedButton(
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) =>PositionedDirectionalTransitionExample()),
+                );
+              },
+              child: const Text("Lecture 16"),
+            ),
+             ElevatedButton(
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) =>const TweenAnimationBuilderExample()),
+                );
+              },
+              child: const Text("Lecture 17"),
+            ),
+            ElevatedButton(
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) =>const IndexedStackTransitionExample()),
+                );
+              },
+              child: const Text("Lecture 18"),
+            ),
+          ],
+        ),
       ),
     );
   }
